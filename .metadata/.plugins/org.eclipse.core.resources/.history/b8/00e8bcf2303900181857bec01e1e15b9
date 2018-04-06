@@ -1,0 +1,15 @@
+class MyArray {
+	// Data Structure
+	int[] array;
+	void createArr (int[] arr) {
+		
+	}
+}
+
+
+public class ArrayTest {
+	
+	public static void main(String[] args) {
+		
+	}
+}

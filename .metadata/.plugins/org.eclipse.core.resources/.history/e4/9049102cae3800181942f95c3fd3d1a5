@@ -1,0 +1,20 @@
+package main;
+
+import vo.Stack;
+
+public class MyMain {
+
+	public static void main(String[] args) {
+		Stack stack = new Stack();
+
+		Object dummy1 = new Object();
+		Object dummy2 = new Object();
+		Object dummy3 = new Object();
+		Object dummy4 = new Object();
+		Object dummy5 = new Object();
+		Object dummy6 = new Object();
+		Object dummy7 = new Object();
+		Object dummy8 = new Object();
+		Object dummy9 = new Object();
+	}
+}
