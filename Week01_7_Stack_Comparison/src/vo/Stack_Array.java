@@ -1,12 +1,12 @@
 package vo;
 
-public class Stack {
+public class Stack_Array implements Stack {
 
 	private Object[] stack;
 	private int arrayLengthUnit = 100; //배열 생성단위
 	private int top;
 	
-	public Stack() {
+	public Stack_Array() {
 		super();
 		this.stack = new Object[arrayLengthUnit];
 		this.top = -1;

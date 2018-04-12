@@ -34,7 +34,7 @@ class Stack {
 	
 	public Stack() {
 		super();
-		this.stack = new Object[100];
+		this.stack = new Object[arrayLengthUnit];
 		this.top = -1;
 	}
 

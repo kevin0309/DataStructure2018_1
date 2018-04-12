@@ -1,11 +1,11 @@
 package vo;
 
-public class Stack {
+public class Stack_Node implements Stack {
 
 	private StackNode top;
 	private StackNode startNode;
 	
-	public Stack() {
+	public Stack_Node() {
 		super();
 		startNode = new StackNode(null);
 		startNode.setIndex(-1);
@@ -21,7 +21,7 @@ public class Stack {
 	}
 	
 	public Object pop() {
-		if (this.isEmpty())
+		if (top.getIndex() == -1)
 			throw new IndexOutOfBoundsException();
 		
 		Object result = top.getValue();
