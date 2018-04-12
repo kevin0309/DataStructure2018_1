@@ -1,15 +1,5 @@
 package vo;
 
-/**
- * codeup 문제
- * 3117
- * 2016
- * 3129
- * 
- * 스택구현해서 깃헙에 올리기
- * @author LG
- *
- */
 public class Stack_First implements Stack {
 
 	private Object[] stack;

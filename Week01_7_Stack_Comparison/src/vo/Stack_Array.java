@@ -3,7 +3,7 @@ package vo;
 public class Stack_Array implements Stack {
 
 	private Object[] stack;
-	private int arrayLengthUnit = 100; //¹è¿­ »ı¼º´ÜÀ§
+	private int arrayLengthUnit = 100; //ê¸°ë³¸ ë°°ì—´ ìƒì„±ë‹¨ìœ„
 	private int top;
 	
 	public Stack_Array() {

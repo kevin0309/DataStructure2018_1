@@ -35,7 +35,7 @@ public class LinearQueue {
 		if (bottom != 0)
 			queue[bottom-1] = null;
 		
-		//¹è¿­ÀÌ ºñ¸é ÃÊ±âÈ­..
+		//ë°°ì—´ì´ ë¹„ì—ˆìœ¼ë©´ ì´ˆê¸°í™”..
 		if (this.isEmpty()) {
 			this.queue = new Object[arrayLengthUnit];
 			this.top = -1;

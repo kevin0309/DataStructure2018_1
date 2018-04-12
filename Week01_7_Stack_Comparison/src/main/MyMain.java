@@ -20,7 +20,7 @@ public class MyMain {
 		System.out.println(process(arrayStack));
 		System.out.println(process(nodeStack));
 		/*
-		 * 200000È¸ ½ÃÇàÇßÀ»‹š ½Ã°£
+		 * 200000íšŒ ì‹œí–‰ ì‹œ ê±¸ë¦° ì‹œê°„
 		 * 28424
 		 * 297
 		 * 23
