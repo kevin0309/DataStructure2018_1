@@ -3,43 +3,36 @@ package vo;
 public class CircularQueue {
 
 	private Object[] queue;
-	private int arrayLengthUnit = 100;
 	private int top;
 	private int bottom;
 	
+	/**
+	 * (0) 1 2 3 4 1 2 3 4
+	 */
 	public CircularQueue() {
 		super();
-		this.queue = new Object[arrayLengthUnit];
-		this.top = -1;
-		this.bottom = -1;
+		this.queue = new Object[5];
+		this.top = 0;
+		this.bottom = 0;
 	}
 	
 	public void put(Object newElement) {
-		if (top%arrayLengthUnit == arrayLengthUnit-1) {
-			Object[] newQueue = new Object[top+arrayLengthUnit+1];
-			System.arraycopy(queue, 0, newQueue, 0, top+1);
-			queue = newQueue;
-			
+		if (top == 4)
+			top = 1;
+		if (queue[top+1] == null)
 			queue[++top] = newElement;
-		}
-		else {
-			queue[++top] = newElement;
-		}
+		else
+			throw new IndexOutOfBoundsException();
 	}
 	
 	public Object get() {
 		if (this.isEmpty())
 			throw new IndexOutOfBoundsException();
 		
-		Object result = queue[++bottom];
+		if (bottom == 4)
+			bottom = 1;
+		Object result = queue[bottom++];
 		queue[bottom-1] = null;
-		
-		//배열이 비었으면 초기화..
-		if (this.isEmpty()) {
-			this.queue = new Object[arrayLengthUnit];
-			this.top = -1;
-			this.bottom = -1;
-		}
 		
 		return result;
 	}
@@ -55,8 +48,8 @@ public class CircularQueue {
 	public boolean isEmpty() {
 		return top == bottom ? true : false;
 	}
-
-	public void setArrayLengthUnit(int arrayLengthUnit) {
-		this.arrayLengthUnit = arrayLengthUnit;
+	
+	public boolean isFull() {
+		return top+1 == bottom;
 	}
 }
