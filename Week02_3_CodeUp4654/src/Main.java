@@ -1,14 +1,18 @@
+import java.util.Date;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scan = new Scanner(System.in);
+		Date start = new Date();
+		/*Scanner scan = new Scanner(System.in);
 		int numberOfTower = scan.nextInt();
 		Scanner scan2 = new Scanner(System.in);
-		String towerHeightListPlainStr = scan2.nextLine().trim();
-		//String towerHeightListPlainStr = "1 2 5 7 4 4 1 2 5 12 12 12 13";
+		String towerHeightListPlainStr = scan2.nextLine().trim();*/
+		String towerHeightListPlainStr = "1 2 5 7 4 4 1 2 5 12 12 12 13";
+		//String towerHeightListPlainStr = Dummy.data;
 		
 		/*StringTokenizer st = new StringTokenizer(towerHeightListPlainStr, " ");
 		int len = st.countTokens();
@@ -43,13 +47,13 @@ public class Main {
 		
 		System.out.println(result);*/
 		
+		//-----------------------------------------------------------------------------------------------------//
+		
 		String[] st = towerHeightListPlainStr.split(" "); 
-		//StringTokenizer st = new StringTokenizer(towerHeightListPlainStr," ");
-		int len = st.length;
-		int[] towerHeightList = new int[len];
+		int[] towerHeightList = new int[st.length];
 		towerHeightList[0] = Integer.parseInt(st[0]);
 		String result = "";
-		for (int i = 1; i < len; i++) {
+		for (int i = 1; i < st.length; i++) {
 			towerHeightList[i] = Integer.parseInt(st[i]);
 			for (int j = i-1; j > -1; j--) {
 				if (towerHeightList[i] <= towerHeightList[j]) {
@@ -62,6 +66,11 @@ public class Main {
 		}
 		//0 0 0 4 5 6 6 4 0 10 11 0 
 		System.out.println(result);
+		
+		
+		Date end = new Date();
+		
+		System.out.println("수행에 걸린 시간 : " + (end.getTime() - start.getTime()));
 	}
 
 }
